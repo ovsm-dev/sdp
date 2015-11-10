@@ -1,0 +1,51 @@
+/**************************************************************************
+ *                                                                        *
+ *  Copyright (C) 2015 OVSM/IPGP                                          *
+ *                                                                        *
+ *  This file is part of Seismic Data Playback 'SDP'.                     *
+ *                                                                        *
+ *  SDP is free software: you can redistribute it and/or modify           *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation, either version 3 of the License, or     *
+ *  (at your option) any later version.                                   *
+ *                                                                        *
+ *  SDP is distributed in the hope that it will be useful,                *
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *  GNU General Public License for more details.                          *
+ *                                                                        *
+ *  You should have received a copy of the GNU General Public License     *
+ *  along with SDP. If not, see <http://www.gnu.org/licenses/>.           *
+ *                                                                        *
+ **************************************************************************/
+
+#ifndef __SDP_QT4_API_H__
+#define __SDP_QT4_API_H__
+
+#include <QString>
+
+namespace SDP {
+namespace Qt4 {
+
+//! Some useful information about the project itself
+static QString const PROJECT_NAME = "@PROJECT_NAME_LONG@";
+static QString const PROJECT_COPYRIGHT = "@PROJECT_COPYRIGHT@";
+static QString const PROJECT_VERSION = "@PROJECT_VERSION@";
+static QString const PROJECT_WEBSITE = "@ORGWEBSITE@";
+static QString const PROJECT_CODENAME = "@CODENAME@";
+static QString const PROJECT_VENDOR = "@PROJECT_VENDOR@";
+static QString const PROJECT_CONTACT = "@PROJECT_CONTACT@";
+
+//! Some useful information about the project's environment
+static QString const PROJECT_INSTALL_DIR = "@CMAKE_INSTALL_PREFIX@";
+static QString const PROJECT_BIN_DIR = "@SDP_BIN_DIR@";
+static QString const PROJECT_SHARE_DIR = "@SDP_SHARE_DIR@";
+static QString const PROJECT_LIB_DIR = "@SDP_LIB_DIR@";
+static QString const PROJECT_INCLUDE_DIR = "@SDP_INCLUDE_DIR@";
+static QString const PROJECT_CONFIG_DIR = "@SDP_CONFIG_DIR@";
+static QString const PROJECT_DOC_DIR = "@SDP_DOC_DIR@";
+
+} // namespace Qt4
+} // namespace SDP
+
+#endif

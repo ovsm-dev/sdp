@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SeismicDataPlayback</title>
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen"
+	title="default" />
+</head>
+<body>
+
+	<!--  start nav-outer-repeat................................................................................................. START -->
+	<div class="nav-outer-repeat">
+		<!--  start nav-outer -->
+		<div class="nav-outer">
+
+			<!--  start nav -->
+			<div class="nav">
+				<div class="table">
+
+					<ul class="select">
+						<li><a href="index.html"><b>Index</b></a>
+							<div class="select_sub">
+								<ul class="sub">
+									<li><a href="index.html">Introduction</a></li>
+									<li><a href="install.html">Installation</a></li>
+								</ul>
+							</div></li>
+					</ul>
+
+					<div class="nav-divider">&nbsp;</div>
+
+					<ul class="current">
+						<li><a href="#nogo"><b>Panels</b></a>
+							<div class="show">
+								<ul class="sub">
+									<li><a href="settings.html">Settings</a></li>
+									<li><a href="recent.html">History</a></li>
+									<li><a href="activity.html">Activity</a></li>
+									<li><a href="trigger.html">Trigger</a></li>
+									<li class="sub_show"><a href="dispatch.html">Dispatch</a></li>
+									<li><a href="detection.html">Detection</a></li>
+								</ul>
+							</div></li>
+					</ul>
+
+
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--  start nav -->
+
+		</div>
+		<div class="clear"></div>
+		<!--  start nav-outer -->
+	</div>
+	<!--  start nav-outer-repeat................................................... END -->
+
+	<div class="clear"></div>
+
+	<!-- start content-outer ........................................................................................................................START -->
+	<div id="content-outer">
+		<!-- start content -->
+		<div id="content">
+
+			<!--  start page-heading -->
+			<div id="page-heading">
+				<h1>SeismicDataPlayback documentation</h1>
+			</div>
+			<!-- end page-heading -->
+
+			<div id="page-content">
+				<h3>Dispatch panel</h3>
+				<p>
+					In this panel, the user may configure a data dispatch script.<br /> The
+					type of data to dispatch is binded to the main dispatch applications <b>msrouter</b>
+					or <b>msmod</b> which support <b>SEED</b> files.<br />For dispatching
+					proper SEED files, the user should use msrouter.
+				</p>
+				<br />
+				<p>
+					<a href=""><img src="images/dispatch_panel.png" border="0"
+						alt="SeismicDataPlayback-settings" height="500px" /></a>
+				</p>
+				<br />
+				<p>If the SEED files to dispatch headers are wrongly tagged, the user
+					should use msmod : a bunch of parameters can be set to fix the suspect
+					files.</p>
+				<br />
+				<p>
+					<a href=""><img src="images/dispatch-custom.png" border="0"
+						alt="SeismicDataPlayback-settings" height="150px" /></a>
+				</p>
+				<br /> <br />
+				<h3>SDS Pattern</h3>
+				<p>
+					# Preset format layouts #<br /> -CHAN dir Write all records into separate
+					Net.Sta.Loc.Chan files<br /> -QCHAN dir Write all records into separate
+					Net.Sta.Loc.Chan.Quality files<br /> -CDAY dir Write all records into
+					separate Net.Sta.Loc.Chan-day files<br /> -BUD BUDdir Write all records in
+					a BUD file layout<br /> -CSS CSSdir Write all records in a CSS-like file
+					layout<br /> The archive 'format' argument is expanded for each record
+					using the following flags:<br /> n : network code, white space removed<br />
+					s : station code, white space removed<br /> l : location code, white space
+					removed<br /> c : channel code, white space removed<br /> Y : year, 4
+					digits<br /> y : year, 2 digits zero padded<br /> j : day of year, 3
+					digits zero padded<br /> H : hour, 2 digits zero padded<br /> M : minute,
+					2 digits zero padded<br /> S : second, 2 digits zero padded<br /> F :
+					fractional seconds, 4 digits zero padded<br /> q : single character record
+					quality indicator (D, R, Q)<br /> L : data record length in bytes<br /> r
+					: Sample rate (Hz) as a rounded integer<br /> R : Sample rate (Hz) as a
+					float with 6 digit precision<br /> % : the percent (%) character<br /> #
+					: the number (#) character<br /> The flags are prefaced with either the %
+					or # modifier. The % modifier<br /> indicates a defining flag while the #
+					indicates a non-defining flag.<br /> All records with the same set of
+					defining flags will be written to the<br /> same file. Non-defining flags
+					will be expanded using the values in the<br /> first record for the
+					resulting file name.
+				</p>
+				<br /> <br />
+				<h3>miniSEED Pattern</h3>
+				<p>
+					# Preset formats:<br /> %Y indicates Year<br /> %M indicates Month<br />
+					%d indicates the Julian day<br /> e.g.: If data is stored in directories
+					formated 2015.010 the parser<br /> should be run with the pattern '%Y.%d'
+				</p>
+				<br /> <br />
+				<h3>Information</h3>
+				<p>The script is levely editable. Since the generated script is quite
+					basic, an advanced user can edit it, enhance it to better fit its needs.</p>
+			</div>
+
+			<div class="clear">&nbsp;</div>
+
+		</div>
+		<!--  end content -->
+		<div class="clear">&nbsp;</div>
+	</div>
+</body>
+</html>

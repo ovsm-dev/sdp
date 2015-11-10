@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SeismicDataPlayback</title>
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen"
+	title="default" />
+</head>
+<body>
+
+	<!--  start nav-outer-repeat................................................................................................. START -->
+	<div class="nav-outer-repeat">
+		<!--  start nav-outer -->
+		<div class="nav-outer">
+
+			<!--  start nav -->
+			<div class="nav">
+				<div class="table">
+
+					<ul class="current">
+						<li><a href="index.html"><b>Index</b></a>
+							<div class="show">
+								<ul class="sub">
+									<li><a href="index.html">Introduction</a></li>
+									<li class="sub_show"><a href="#nogo">Installation</a></li>
+								</ul>
+							</div></li>
+					</ul>
+
+					<div class="nav-divider">&nbsp;</div>
+
+					<ul class="select">
+						<li><a href="#nogo"><b>Panels</b></a>
+							<div class="select_sub">
+								<ul class="sub">
+									<li><a href="settings.html">Settings</a></li>
+									<li><a href="recent.html">History</a></li>
+									<li><a href="activity.html">Activity</a></li>
+									<li><a href="trigger.html">Trigger</a></li>
+									<li><a href="dispatch.html">Dispatch</a></li>
+									<li><a href="detection.html">Detection</a></li>
+								</ul>
+							</div></li>
+					</ul>
+
+
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--  start nav -->
+
+		</div>
+		<div class="clear"></div>
+		<!--  start nav-outer -->
+	</div>
+	<!--  start nav-outer-repeat................................................... END -->
+
+	<div class="clear"></div>
+
+	<!-- start content-outer ........................................................................................................................START -->
+	<div id="content-outer">
+		<!-- start content -->
+		<div id="content">
+
+			<!--  start page-heading -->
+			<div id="page-heading">
+				<h1>SeismicDataPlayback installation</h1>
+			</div>
+			<!-- end page-heading -->
+
+			<div id="page-content">
+				<h3>Requirements</h3>
+				<p>
+					The hardware requirements for performing dispatch and detection depend on
+					the volume of data to be processed, and the amount of time the user has to
+					perform the analysis.<br /> <br />
+				</p>
+				<p>
+					As a nominal configuration, SDP has been tested to opperate 3 slots
+					(threads) inside a virtual machine running :<br />
+					<ul class="greyarrow">
+						<li>1 CPU</li>
+						<li>4GB RAM</li>
+						<li>HDD 40GB</li>
+					</ul>
+					A more athletic configuration would certainly help process scripts faster.<br />
+				</p>
+				<br /> <br />
+				<h3>O.S.</h3>
+				<p>SDP can be ran and has been tested on various operating systems like
+					Linux or Unix.</p>
+				<p>
+					Prior to installation, the user must install the following libraries :<br />
+					<ul class="standard">
+						<li>python-obspy</li>
+						<li>gcc/g++</li>
+						<li>cmake</li>
+						<li>qt4-dev</li>
+						<li>rdseed</li>
+						<li>msmod</li>
+						<li>msrouter</li>
+					</ul>
+				</p>
+				<p>
+					<b>msrouter</b>, <b>msmod</b> are compiled by the installer, but the user
+					can specify its own by editing the configuration file.<br />
+					<b>rdseed</b> binary which is mandatory for using binary dataless for
+					populating the station inventory should be registered in user's $path, or
+					specified in configuration file.
+				</p>
+				<br /> <br />
+				<h3>Installation procedure</h3>
+				<p>The next steps describe the installation of SeismicDataPlayback from
+					the source code :</p>
+				<p>
+					<ul class="standard">
+						<li>go inside sdp folder<br />cd ~/install-sdp/sdp/
+						</li>
+						<li>create build subfolder<br />mkdir build
+						</li>
+						<li>go inside build folder<br />cd build/
+						</li>
+						<li>start compiling<br />cmake .. && make
+						</li>
+						<li>install the application<br />make install
+						</li>
+					</ul>
+				</p>
+
+			</div>
+
+			<!-- 
+			<table border="0" width="100%" cellpadding="0" cellspacing="0"
+				id="content-table">
+				<tr>
+					<th rowspan="3" class="sized"><img
+						src="images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+					<th class="topleft"></th>
+					<td id="tbl-border-top">&nbsp;</td>
+					<th class="topright"></th>
+					<th rowspan="3" class="sized"><img
+						src="images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+				</tr>
+				<tr>
+					<td id="tbl-border-left"></td>
+					<td>
+						<div id="content-table-inner">
+							<div id="table-content">
+								<h2>Sub Heading</h2>
+								<h3>Local Heading</h3>
+								This is the documentation for the SeismicDataPlayback version
+								2015-1.1.0.
+							</div>
+							<div class="clear"></div>
+						</div>
+					</td>
+					<td id="tbl-border-right"></td>
+				</tr>
+				<tr>
+					<th class="sized bottomleft"></th>
+					<td id="tbl-border-bottom">&nbsp;</td>
+					<th class="sized bottomright"></th>
+				</tr>
+			</table>
+			-->
+			<div class="clear">&nbsp;</div>
+
+		</div>
+		<!--  end content -->
+		<div class="clear">&nbsp;</div>
+	</div>
+</body>
+</html>

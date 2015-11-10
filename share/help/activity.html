@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SeismicDataPlayback</title>
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen"
+	title="default" />
+</head>
+<body>
+
+	<!--  start nav-outer-repeat................................................................................................. START -->
+	<div class="nav-outer-repeat">
+		<!--  start nav-outer -->
+		<div class="nav-outer">
+
+			<!--  start nav -->
+			<div class="nav">
+				<div class="table">
+
+					<ul class="select">
+						<li><a href="index.html"><b>Index</b></a>
+							<div class="select_sub">
+								<ul class="sub">
+									<li><a href="index.html">Introduction</a></li>
+									<li><a href="install.html">Installation</a></li>
+								</ul>
+							</div></li>
+					</ul>
+
+					<div class="nav-divider">&nbsp;</div>
+
+					<ul class="current">
+						<li><a href="#nogo"><b>Panels</b></a>
+							<div class="show">
+								<ul class="sub">
+									<li><a href="settings.html">Settings</a></li>
+									<li><a href="recent.html">History</a></li>
+									<li class="sub_show"><a href="activity.html">Activity</a></li>
+									<li><a href="trigger.html">Trigger</a></li>
+									<li><a href="dispatch.html">Dispatch</a></li>
+									<li><a href="detection.html">Detection</a></li>
+								</ul>
+							</div></li>
+					</ul>
+
+
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--  start nav -->
+
+		</div>
+		<div class="clear"></div>
+		<!--  start nav-outer -->
+	</div>
+	<!--  start nav-outer-repeat................................................... END -->
+
+	<div class="clear"></div>
+
+	<!-- start content-outer ........................................................................................................................START -->
+	<div id="content-outer">
+		<!-- start content -->
+		<div id="content">
+
+			<!--  start page-heading -->
+			<div id="page-heading">
+				<h1>SeismicDataPlayback documentation</h1>
+			</div>
+			<!-- end page-heading -->
+
+			<div id="page-content">
+				<h3>Activity panel</h3>
+				<p>This panel offers a queue job manager.&nbsp;The user may manage job
+					execution, termination, reset and deletion.</p>
+				<br />
+				<p>
+					<a href="http://www.ipgp.fr"><img src="images/activity_panel.png" border="0"
+						alt="SeismicDataPlayback-settings" height="500px" /></a>
+				</p>
+				<br />
+
+				<p>The number of jobs that the manager can handle is virtually unlimited
+					(pending the computer's ressources).</p>
+				<p>Jobs in queue get saved each time they get modified. At startup
+					un-processed jobs will be loaded in queue, ready to be launched.</p>
+				<br />
+				<p>
+					The queue manager can run in two ways :<br />
+					<ul class="standard">
+						<li>Run selected jobs only by selecting jobs first and then click the
+							'Run selected' button. If new jobs are added while the queue is running,
+							they will not be scheduled to run.</li>
+						<li>Run all jobs in queue by just clicking the 'Run' button. If the
+							queue is running, freshly addeds jobs will be scheduled to be executed
+							aswell.</li>
+					</ul>
+				</p>
+				<br />
+				<p>Once a job is started, the user may follow its evolution thoughout
+					time by simply selecting it, its standard output is displayed lively.</p>
+				<p>If needed, a running job can be stopped at any time. Resultings
+					triggers if there is any will still be created and attached to the job of
+					interest.</p>
+			</div>
+
+			<div class="clear">&nbsp;</div>
+
+		</div>
+		<!--  end content -->
+		<div class="clear">&nbsp;</div>
+	</div>
+</body>
+</html>

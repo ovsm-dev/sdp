@@ -1,0 +1,201 @@
+.TH MSROUTER 1 2006/08/12
+.SH NAME
+Mini-SEED record router: splitting, shuffling, organizing, etc.
+
+.SH SYNOPSIS
+.nf
+msrouter [options] [file1 file2 file3 ...]
+
+.fi
+.SH DESCRIPTION
+\fBmsrouter\fP shuffles Mini-SEED records into user defined file and
+directory layouts.  Input data records can either be read from one or
+more files or read from standard input.  If no input files are
+specified on the command line, records are read from standard input.
+
+A file and directory layout, or archive format, is specified as a
+string potentially including substitution flags.  For each input
+record, any substitution flags in an archive format are replaced with
+approriate values from the record (see the \fBArchive Format\fR
+section below).  Some preset archive formats are defined: A simple
+unique channel layout (CHAN), a simple unique channel-day layout
+(CDAY), the Buffer of Uniform Data layout (BUD) and a common CSS
+layout are defined.  More than one archive many be specified at once,
+in which case every input record is written once to each archive.
+
+.SH OPTIONS
+
+.IP "-V         "
+Print program version and exit.
+
+.IP "-h         "
+Print program usage and exit.
+
+.IP "-H         "
+Print program usage including substitution flag descriptions and exit.
+
+.IP "-v         "
+Be more verbose.  This flag can be used multiple times ("-v -v" or
+"-vv") for more verbosity.
+
+.IP "-Q \fIDRQ\fR"
+Re-stamp all input Mini-SEED records with the specified record
+indicator/quality flag before processing.  The value can only
+be 'D', 'R' or 'Q'.  The indicator is changed regardless of what the
+original was.
+
+.IP "-D         "
+Delete each input file after processing.  Each input file is deleted
+regardless if there were errors reading the file.
+
+.IP "-c         "
+Split output files on continuous trace segments adding a suffix to any
+trace segments after the first.
+
+.IP "-B         "
+Write uncompressed binary data samples to the output file(s) instead
+of the Mini-SEED records.  Binary data is appended to output files in
+the order it is read in.  Furthermore the -c option is recommended to
+keep continuous time series separate.
+
+.IP "-r \fIreclen\fP"
+Specify the input record length in bytes.  By default the
+record length of each input Mini-SEED record is automatically
+detected, this option forces the record length.
+
+.IP "-i \fItimeout\fR"
+Timeout for closing idle data stream files in seconds.  The idle time
+of data streams is only checked when a record is processed so if no
+records are being processed no idle stream files will be closed.
+There should be no reason to change this parameter except for unusual
+cases where the process is running against an open file number limit.
+This option is only really useful when the program is reading records
+in a continuous fashion (probably from standard input) for long
+periods of time; this will keep the program from unnecessarily holding
+files open.  Default is 300 seconds.
+
+.IP "-A \fIformat\fR"
+All input records will be written to a directory/file layout defined
+by \fIformat\fP.  All directories implied in the \fIformat\fP string
+will be created if necessary.  The option may be used multiple times
+to write input records to multiple archives.  See the \fBArchive
+Format\fR section below.
+
+.IP "-CHAN \fIdir\fR"
+All input records will be written into a simple unique channel layout
+where each channel is written to it's own file in the specified
+\fIdir\fP.  This directory will be created if necessary.  This option
+is a preset version of the '-A' option.  The CHAN dir/file layout is:
+.nf
+<dir>/NET.STA.LOC.CHAN
+.fi
+
+.IP "-CDAY \fIdir\fR"
+All input records will be written into a simple unique channel-day
+layout where each channel-day is written to it's own file in the
+specified \fIdir\fP.  This directory will be created if necessary.
+This option is a preset version of the '-A' option.  The CDAY dir/file
+layout is:
+.nf
+<dir>/NET.STA.LOC.CHAN.YEAR:DAY:HOUR:MIN:SEC
+.fi
+
+.IP "-BUD \fIBUDdir\fR"
+All input records will be written into a Buffer of Uniform Data (BUD)
+dir/file layout starting at the specified directory.  This directory
+and all subdirectories will be created if necessary.  This option is a
+preset version of the '-A' option.  The BUD dir/file layout is:
+.nf
+<BUDdir>/<NET>/<STA>/STA.NET.LOC.CHAN.YEAR.DAY
+.fi
+
+.IP "-CSS \fICSSdir\fR"
+All input records will be written into a CSS dir/file layout starting
+at the specified directory.  This directory and all subdirectories
+will be created if necessary.  The files are split on day boundaries,
+the hour, minute and second values are those in the first record in
+the file.  This option is a preset version of the '-A' option.  The
+SDS dir/file layout is:
+.nf
+<CSSdir>/<YEAR>/<JDAY>/STA.CHAN.YEAR:JDAY:HOUR:MIN:SEC
+.fi
+
+.SH "Archive Format"
+An archive format is expanded for each record using the following
+substitution flags:
+
+.nf
+  \fBn\fP : network code, white space removed
+  \fBs\fP : station code, white space removed
+  \fBl\fP : location code, white space removed
+  \fBc\fP : channel code, white space removed
+  \fBY\fP : year, 4 digits
+  \fBy\fP : year, 2 digits zero padded
+  \fBj\fP : day of year, 3 digits zero padded
+  \fBH\fP : hour, 2 digits zero padded
+  \fBM\fP : minute, 2 digits zero padded
+  \fBS\fP : second, 2 digits zero padded
+  \fBF\fP : fractional seconds, 4 digits zero padded
+  \fBq\fP : single character record quality indicator (D, R, Q)
+  \fBL\fP : data record length in bytes
+  \fBr\fP : sample rate (Hz) as a rounded integer
+  \fBR\fP : sample rate (Hz) as a float with 6 digit precision
+  \fB%\fP : the percent (%) character
+  \fB#\fP : the number (#) character
+.fi
+
+The flags are prefaced with either the \fB%\fP or \fB#\fP modifier.
+The \fB%\fP modifier indicates a defining flag while the \fB#\fP
+indicates a non-defining flag.  All records with the same set of
+defining flags will be written to the same file.  Non-defining flags
+will be expanded using the values in the first record for the
+resulting file name.
+
+Time flags are based on the start time of the given record.
+
+.SH EXAMPLES
+
+The format string for the predefined \fIBUD\fP layout:
+
+\fB/archive/%n/%s/%s.%n.%l.%c.%Y.%j\fP
+
+would expand to day length files named something like:
+
+\fB/archive/NL/HGN/HGN.NL..BHE.2003.055\fP
+
+As an example of using non-defining flags the format string for the
+predefined \fICSS\fP layout:
+
+\fB/data/%Y/%j/%s.%c.%Y:%j:#H:#M:#S\fP
+
+would expand to:
+
+\fB/data/2003/055/HGN.BHE.2003:055:14:17:54\fP
+
+resulting in day length files because the hour, minute and second are
+specified with the non-defining modifier.  The hour, minute and second
+fields are from the first record in the file.
+
+.SH CAVEATS
+
+If the -c option is used in combination with multiplexed input data
+where the archive format does not separate the multiplexing
+(e.g. input includes multiple channels from one or more stations but
+the resulting archive is station files) the files will dutifully be
+split when gaps in any of the included timeseries are detected, but
+that won't make much sense if the output is still multiplexed.
+
+If the program is running for long periods of time in a continuous
+fashion, idle archive files will be closed.  If the archive format
+includes non-defining flags (those starting with '#') and archive
+files are close and later re-opened a new file will be created using
+the non-defining flags in the filename just as the initial file was
+created.  One work-around is to increase the idle timeout value so
+that archive files are not closed before more data for those files are
+received.
+
+.SH AUTHOR
+.nf
+Chad Trabant
+IRIS Data Management Center
+.fi

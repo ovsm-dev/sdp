@@ -1,0 +1,76 @@
+SET(GUI_DATAMODEL_SOURCES
+    qroundprogressbar/QRoundProgressBar.cpp
+    archiveobjects.cpp
+    bashhighlighter.cpp
+    cache.cpp
+    config.cpp
+    databasemanager.cpp
+    fancywidgets.cpp
+    job.cpp
+    logger.cpp
+    macros.cpp
+    mainframe.cpp
+    panels.cpp
+    splashscreen.cpp
+    subpanels.cpp
+    parametermanager.cpp
+    progress.cpp
+    syntaxhighlighter.cpp
+    system.cpp
+    trigger.cpp
+    utils.cpp
+)
+
+SET(GUI_DATAMODEL_HEADERS
+    archiveobjects.h
+    cache.h
+    config.h
+    databasemanager.h
+    errorhandler.h
+    macros.h
+    parametermanager.h
+    singleton.h
+    system.h
+    utils.h
+)
+
+SET(GUI_DATAMODEL_MOC_HEADERS
+    qroundprogressbar/QRoundProgressBar.h
+    bashhighlighter.h
+    fancywidgets.h
+    job.h
+    logger.h
+    mainframe.h
+    panels.h
+    progress.h
+    splashscreen.h
+    subpanels.h
+    syntaxhighlighter.h
+    trigger.h
+)
+
+SET(GUI_DATAMODEL_UI
+    about.ui
+    activitypanel.ui
+    commit.ui
+    datasourcesubpanel.ui
+    detectionpanel.ui
+    dispatchpanel.ui
+    enqueue.ui
+    entity.ui
+    inventorysubpanel.ui
+    logger.ui
+    mainframe.ui
+    progress.ui
+    recentpanel.ui
+    settingspanel.ui
+    splashscreen.ui
+    streamsubpanel.ui
+    timewindowsubpanel.ui
+    triggerpanel.ui
+    triggersubpanel.ui
+)
+
+SET(GUI_DATAMODEL_RESOURCES sdp.qrc)
+
+SDP_SETUP_GUI_LIB_SUBDIR(GUI_DATAMODEL)

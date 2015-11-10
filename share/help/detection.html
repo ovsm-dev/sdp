@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SeismicDataPlayback</title>
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen"
+	title="default" />
+</head>
+<body>
+
+	<!--  start nav-outer-repeat................................................................................................. START -->
+	<div class="nav-outer-repeat">
+		<!--  start nav-outer -->
+		<div class="nav-outer">
+
+			<!--  start nav -->
+			<div class="nav">
+				<div class="table">
+
+					<ul class="select">
+						<li><a href="index.html"><b>Index</b></a>
+							<div class="select_sub">
+								<ul class="sub">
+									<li><a href="index.html">Introduction</a></li>
+									<li><a href="install.html">Installation</a></li>
+								</ul>
+							</div></li>
+					</ul>
+
+					<div class="nav-divider">&nbsp;</div>
+
+					<ul class="current">
+						<li><a href="#nogo"><b>Panels</b></a>
+							<div class="show">
+								<ul class="sub">
+									<li><a href="settings.html">Settings</a></li>
+									<li><a href="recent.html">History</a></li>
+									<li><a href="activity.html">Activity</a></li>
+									<li><a href="trigger.html">Trigger</a></li>
+									<li><a href="dispatch.html">Dispatch</a></li>
+									<li class="sub_show"><a href="detection.html">Detection</a></li>
+								</ul>
+							</div></li>
+					</ul>
+
+
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--  start nav -->
+
+		</div>
+		<div class="clear"></div>
+		<!--  start nav-outer -->
+	</div>
+	<!--  start nav-outer-repeat................................................... END -->
+
+	<div class="clear"></div>
+
+	<!-- start content-outer ........................................................................................................................START -->
+	<div id="content-outer">
+		<!-- start content -->
+		<div id="content">
+
+			<!--  start page-heading -->
+			<div id="page-heading">
+				<h1>SeismicDataPlayback documentation</h1>
+			</div>
+			<!-- end page-heading -->
+
+			<div id="page-content">
+				<h3>Detection panel</h3>
+				<p>
+					In this panel the user may configure a detection script by setting up
+					various parameters like :<br />
+					<ul class="standard">
+						<li>the data source,</li>
+						<li>the stream selection,</li>
+						<li>the time window definition,</li>
+						<li>the trigger method to apply,</li>
+						<li>the inventory to use.</li>
+					</ul>
+				</p>
+				<br />
+				<p>
+					<a href=""><img src="images/detection_panel.png" border="0"
+						alt="SeismicDataPlayback-settings" height="500px" /></a>
+				</p>
+				<br />
+				<p>
+					Loading stations inventory can be done in three ways :<br />
+					<ul class="standard">
+						<li>by creating inventory by hand (right click, Add network, etc),</li>
+						<li>by loading an ASCII station summary header file<br />e.g. : each
+							line of the file should use the format like so :<br />
+							ZU,CAPH,19.7355,-72.1883,17.0,2013-08-2T00:00:00,2013-10-10T23:59:00,HHZ,
+							,HHN, ,HHE, ,
+						</li>
+						<li>by loading a pure dataless file (bin).</li>
+					</ul>
+					The latter is made possible if the user specifies explicitly the location
+					of <b>rdseed</b> bin (from user $path or from the configuration file).
+				</p>
+				<br />
+				<p>
+					<a href=""><img src="images/detection-inventory.png" border="0"
+						alt="SeismicDataPlayback-settings" height="300px" /></a>
+				</p>
+				<br />
+				<p>
+					The generated script, written in python, leans on ObsPy library to fetch,
+					process, analyze the data. Triggers if there are any will be listed,
+					pictures generated, everything loaded in the <a href="trigger.html">Trigger
+						panel</a>, waiting for user revision.
+				</p>
+			</div>
+
+			<div class="clear">&nbsp;</div>
+
+		</div>
+		<!--  end content -->
+		<div class="clear">&nbsp;</div>
+	</div>
+</body>
+</html>

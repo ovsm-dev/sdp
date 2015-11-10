@@ -1,0 +1,88 @@
+2008.162: version 2.1
+	- Update libmseed to 2.1.5.
+	- Use normalized (time correction applied) start time when
+	writing records to user defined archive files with time fields.
+
+2007.030: version 2.0
+	- Update libmseed to 2.0.
+	- Modify src/Makefile so user defined CC and CFLAGS are used.
+
+2006.224: version 1.9
+	- Remove -a option, record length is detected by default for each
+	input record.
+
+2006.209: version 1.8
+	- Update to libmseed 1.8 and use new get_errorstr() function
+	for diagnostic messages on file read errors.
+	- Add gcc32, gcc32debug and gcc64debug Makefile targets.
+
+2006.184: version 1.7
+	- Update to libmseed 1.7. 
+
+2006.117: version 1.6
+	- Update to libmseed 1.6.  Includes support for detecting
+	record lengths even when no Blockette 1000 is present.
+
+2006.087: version 1.5
+	- Add 'L' as a format flag indicating data record length.
+
+2006.082: version 1.4
+	- Update to libmseed 1.5.2.  Includes support for packed files.
+	- Change 'i' archive format flag to 'q'.
+
+2005.353: version 1.3
+	- Add -B option to write uncompressed binary data samples to the
+	output files instead of the Mini-SEED data records.
+
+2005.236: version 1.2
+	- Update to libmseed 1.4.5.  Includes better data record detection
+	and small bug fixes.
+
+2005.291: version 1.1
+	- Add '-D' option to delete input files after processing.
+
+2005.277: version 1.0
+	- Update to libmseed 1.3.
+	- Add '-Q' option to re-stamp the data with specified quality
+	indicator.
+
+2005.237: version 0.9
+	- Update to libmseed 1.1.
+	- Add '-c' option to split files on continuous segments, all
+	segments after the first one have a suffix appended.
+	- Add caveat to man page explaining the pitfall of idle stream
+	closing and non-defining flags.
+
+2005.172: version 0.8
+	- Update to libmseed 1.0pre5.
+
+2005.141: version 0.7
+	- Update to libmseed 1.0pre4.
+
+2005.128: version 0.6
+	- Add 'gcc64' target to Makefiles.
+	- Update to libmseed 1.0pre3.
+
+2005.093: version 0.5
+	- Update Makefile(s) to include a 'gcc' target.
+	- Add instructions to get usage when no targets are specified.
+	- Update to libmseed 0.9.9a.
+
+2005.081: version 0.4
+	- Add '-a' option to autodetect each input record length.
+	- Add 'r' and 'R' (samprate) archiving substitution flags.
+	- Update to libmseed 0.9.8.
+
+2005.039: version 0.3
+	- Re-arrange where the preset layouts are included, this is
+	now done in msrouter.c and dsarchive.[ch] are totally generic.
+	- Add CHAN and CDAY preset archive layouts.
+	- Update to libmseed 0.9.5.
+
+2004.357: version 0.2
+	- Fix up verbosity printing for the dsarchive functions and move
+	the archive.[ch] stuff into dsarchive.[ch].
+	- Add man page.
+
+2004.356: version 0.1
+	- Merge slarchive and libmseed to make a first cut miniSEED sorter.

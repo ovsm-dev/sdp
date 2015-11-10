@@ -1,0 +1,29 @@
+SET(PACKAGE_NAME SEISMICDATAPLAYBACK)
+SET(APP_NAME sdp)
+
+SET(${PACKAGE_NAME}_SOURCES
+	main.cpp
+	mainwindow.cpp
+)
+
+SET(${PACKAGE_NAME}_HEADERS "")
+
+
+SET(${PACKAGE_NAME}_MOC_HEADERS
+	mainwindow.h
+)
+
+SET(${PACKAGE_NAME}_UI
+	mainwindow.ui
+)
+
+
+SET(${PACKAGE_NAME}_RESOURCES "")
+
+SDP_ADD_GUI_EXECUTABLE(${PACKAGE_NAME} ${APP_NAME})
+SDP_LINK_LIBRARIES_INTERNAL(${APP_NAME} qt4)
+
+# Copy applicationi bundle on install
+IF(APPLE)
+    INSTALL(CODE "execute_process(COMMAND cp -r ${SDP_BUILD_DIR}/bin/${APP_NAME}.app ${SDP_BIN_DIR})")
+ENDIF(APPLE)

@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DataSource</class>
+ <widget class="QWidget" name="DataSource">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>456</width>
+    <height>324</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="verticalSpacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0" colspan="2">
+    <widget class="QFrame" name="frame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="sizeIncrement">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Data source</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_14">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(90, 90, 90);</string>
+        </property>
+        <property name="text">
+         <string>Preset:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBoxPreset">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>4</number>
+     </property>
+     <property name="bottomMargin">
+      <number>4</number>
+     </property>
+     <item>
+      <widget class="QRadioButton" name="radioButtonFile">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Fi&amp;le</string>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frameFile">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>95</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>95</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>25</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>6</number>
+        </property>
+        <item row="2" column="0">
+         <widget class="QRadioButton" name="radioButtonFileInventory">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By selecting this option the file's stations will be used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>&amp;Use inventory from file</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_17">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Read data from multiplexed file:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QRadioButton" name="radioButtonCustomInventory">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By selecting this option the user will have to specify the stations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>Use custo&amp;m inventory</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLineEdit" name="lineEditFile">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;File path of the file to be processed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolButtonFile">
+            <property name="minimumSize">
+             <size>
+              <width>16</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;table border=&quot;1&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px;&quot; cellspacing=&quot;2&quot; cellpadding=&quot;0&quot; bgcolor=&quot;#ffffff&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeddee&quot; style=&quot; vertical-align:bottom; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-weight:600; color:#000000; background-color:#eeddee;&quot;&gt;Format&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeddee&quot; style=&quot; vertical-align:bottom; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-weight:600; color:#000000; background-color:#eeddee;&quot;&gt;Required Module&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeddee&quot; style=&quot; vertical-align:bottom; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p align=&quot;center&quot;&gt;&lt;a name=&quot;linked-function-call&quot;/&gt;&lt;span style=&quot; font-family:'sans-serif'; font-weight:600; color:#000000;&quot;&gt;L&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-weight:600; color:#000000;&quot;&gt;inked Function Call&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;MSEED&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.mseed.html#module-obspy.mseed&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.mseed&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.mseed.core.readMSEED.html#obspy.mseed.core.readMSEED&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.mseed.core.readMSEED()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;SAC&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.sac.html#module-obspy.sac&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.sac&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.sac.core.readSAC.html#obspy.sac.core.readSAC&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.sac.core.readSAC()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;GSE2&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.gse2.html#module-obspy.gse2&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.gse2&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.gse2.core.readGSE2.html#obspy.gse2.core.readGSE2&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.gse2.core.readGSE2()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;SEISAN&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.seisan.html#module-obspy.seisan&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.seisan&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.seisan.core.readSEISAN.html#obspy.seisan.core.readSEISAN&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.seisan.core.readSEISAN()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;SACXY&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.sac.html#module-obspy.sac&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.sac&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.sac.core.readSACXY.html#obspy.sac.core.readSACXY&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.sac.core.readSACXY()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;GSE1&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.gse2.html#module-obspy.gse2&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.gse2&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.gse2.core.readGSE1.html#obspy.gse2.core.readGSE1&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.gse2.core.readGSE1()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;Q&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.sh.html#module-obspy.sh&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.sh&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.sh.core.readQ.html#obspy.sh.core.readQ&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.sh.core.readQ()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;SH_ASC&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.sh.html#module-obspy.sh&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.sh&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.sh.core.readASC.html#obspy.sh.core.readASC&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.sh.core.readASC()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;SLIST&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.core.html#module-obspy.core&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.core&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.core.ascii.readSLIST.html#obspy.core.ascii.readSLIST&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.core.ascii.readSLIST()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;TSPAIR&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.core.html#module-obspy.core&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.core&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.core.ascii.readTSPAIR.html#obspy.core.ascii.readTSPAIR&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.core.ascii.readTSPAIR()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;Y&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.y.html#module-obspy.y&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.y&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.y.core.readY.html#obspy.y.core.readY&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.y.core.readY()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;SEGY&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.segy.html#module-obspy.segy&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.segy&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.segy.core.readSEGY.html#obspy.segy.core.readSEGY&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.segy.core.readSEGY()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;SU&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.segy.html#module-obspy.segy&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.segy&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.segy.core.readSU.html#obspy.segy.core.readSU&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.segy.core.readSU()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;SEG2&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.seg2.html#module-obspy.seg2&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.seg2&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.seg2.seg2.readSEG2.html#obspy.seg2.seg2.readSEG2&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.seg2.seg2.readSEG2()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;WAV&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.wav.html#module-obspy.wav&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.wav&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.wav.core.readWAV.html#obspy.wav.core.readWAV&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.wav.core.readWAV()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;PICKLE&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.core.html#module-obspy.core&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.core&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.core.stream.readPickle.html#obspy.core.stream.readPickle&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.core.stream.readPickle()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;DATAMARK&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.datamark.html#module-obspy.datamark&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.datamark&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.datamark.core.readDATAMARK.html#obspy.datamark.core.readDATAMARK&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.datamark.core.readDATAMARK()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#000000; background-color:#eeeeff;&quot;&gt;CSS&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/obspy.css.html#module-obspy.css&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.css&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#eeeeff&quot; style=&quot; vertical-align:top; padding-left:5; padding-right:5; padding-top:3; padding-bottom:3;&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://docs.obspy.org/packages/autogen/obspy.css.core.readCSS.html#obspy.css.core.readCSS&quot;&gt;&lt;span style=&quot; font-family:'Consolas,Menlo,Monaco,LucidaConsole,LiberationMono,DejaVuSansMono,BitstreamVeraSansMono,CourierNew,monospace,serif'; font-weight:600; text-decoration: underline; color:#355f7c; background-color:#eeeeff;&quot;&gt;obspy.css.core.readCSS()&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButtonArclinkServer">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Arclin&amp;k server</string>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frameArcServer">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>135</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>135</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <property name="horizontalSpacing">
+         <number>6</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>6</number>
+        </property>
+        <property name="leftMargin">
+         <number>25</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_12">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>URL:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditArclinkServerAddress">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Host name of the remote ArcLink server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_13">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Port:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBoxArclinkServerPort">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Port of the remote ArcLink server (default port is ``18002``).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="maximum">
+             <number>56536</number>
+            </property>
+            <property name="value">
+             <number>18001</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>User:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEditArclinkServerUser">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The user name is used for identification with the ArcLink server. This entry is also used for usage statistics within the data centers, so please provide a meaningful user id such as your email address.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Password:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineEditArclinkServerPassword">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A password used for authentication with the ArcLink server (default is an empty string).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Institution:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="lineEditArclnkServerInstitution">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A string containing the name of the institution of the requesting person (default is an ``'Anonymous'``).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_11">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Timeout:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QSpinBox" name="spinBoxArclinkServerTimeout">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seconds before a connection timeout is raised (default is 20 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="suffix">
+           <string> sec</string>
+          </property>
+          <property name="maximum">
+           <number>200</number>
+          </property>
+          <property name="value">
+           <number>20</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="1">
+    <spacer name="horizontalSpacer_2">
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

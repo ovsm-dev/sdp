@@ -1,0 +1,10 @@
+
+[Desktop Entry]
+Name=SeismicDataPlayback
+Comment=A simple ObsPy script writter.
+Exec=sdp %U
+Icon=sdp
+Terminal=false
+Type=Application
+Categories=AudioVideoEditing;AudioVideo;Qt;
+Name[en_IN]=sdp.desktop
